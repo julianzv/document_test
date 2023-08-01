@@ -13,7 +13,7 @@ Antes de ejecutar la aplicación, ejecutar el zookeeper y el server de Kafka
 Para ejecutar la aplicación, se corre el comando:
 - `uvicorn main:app --reload`
 
-La aplicación recibe datos para dos tipos de producto: seguro oncológico y seguro de vida Zurich. Estos tienen sus templates y funciones propias, adaptadas desde el servicio original de documentos. 
+La aplicación recibe datos para dos tipos de producto: seguro oncológico y seguro de vida Zurich. Estos tienen sus templates y funciones propias, adaptadas desde el servicio original de documentos. En el archivo data.py se encuentran dos diccionarios con los json que se envían de prueba, el productor de Kafka elige aleatoriamente entre uno de los datos con su correspondiente ID de producto. 
 
 Tiene una estructura productor-consumidor, y guarda los registros en un diccionario. 
 
