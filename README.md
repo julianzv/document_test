@@ -11,4 +11,5 @@ Antes de ejecutar la aplicación, ejecutar el zookeeper y el server de Kafka
 - `bin/kafka-server-start.sh config/server.properties`
 
 Para ejecutar la aplicación, se corre el comando:
+
 `uvicorn main:app --reload`
