@@ -21,6 +21,10 @@ Los pdfs se descargan en la carpeta /pdfs, se generan utilizando la librería py
 
 Una vez esté ejecutandose la aplicación, empezará a enviar y recibir mensajes. Para facilitar la lectura, se imprimen en consola los ids de los objetos.
 
+Para consultar el estado del documento creado, se utiliza la ruta /consultar_datos/{id}, la cual a través de un json indica si el documento ya está listo y su link de descarga.
+
+Se agregó también un temporizador y contador de mensajes enviados/recibidos, para revisar el rendimiento. 
+
 
 
 
