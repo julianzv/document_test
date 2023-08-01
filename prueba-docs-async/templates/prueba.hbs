@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy report</title>
+  
+</head>
+<body>
+    <h1>Policy report</h1>
+    <div id="editor">
+        <p> Hola {{insured.name}}</p>
+        <p> Este es tu seguro oncológico </p>    
+    </div>
+    {# if isAdditionalInsureds}
+    <div class="header-table-container">
+        <div class="header-table-header" colspan="5">
+            Resumen de tu contratación
+        </div>
+        <table class="header-table" style="table-layout: fixed">
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <p class="table-label">Asegurado titular</p>
+                        <p class="bold mt-5">
+                            {{insured.name}} {{insured.paternalLastName}} {{insured.maternalLastName}}
+                        </p>
+                    </td>
+                    <td colspan="2">
+                        <p class="table-label">RUT titular</p>
+                        <p class="bold mt-5">{{formatRut insured.rut }}</p>
+                    </td>
+                </tr>
+               
+    {/if}
+
+</body>
+</html>

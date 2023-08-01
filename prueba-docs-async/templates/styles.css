@@ -1,0 +1,1030 @@
+@font-face {
+    font-family: 'Sailec';
+    font-weight: 400;
+    src: url('/assets/fonts/Sailec-Regular.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'Sailec';
+    font-weight: 500;
+    src: url( /assets/fonts/Sailec-Medium.otf) format('woff');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url( /assets/fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 500;
+    src: url( /assets/fonts/Lato-Bold.ttf) format('truetype');
+}
+
+:root {
+    --space-2: 0.125rem;
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-20: 1.25rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-40: 2.5rem;
+    --space-48: 3rem;
+    --space-56: 3.5rem;
+    --main-padding: 50px;
+    --page-padding-x: 55px;
+    --page-padding-x-neg: -55px;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+@page {
+    size: auto;
+    margin-bottom: 14mm;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+tt,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+label,
+caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.sailec {
+    font-family: 'Sailec'
+}
+
+.lato {
+    font-family: 'Lato'
+}
+
+.bold {
+    font-weight: 500;
+}
+
+body {
+    line-height: 1.2;
+    font-family: 'Sailec';
+}
+
+.icon-container {
+    background-color: white;
+    display: inline-flex;
+    height: 25pt;
+    width: 25pt;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 999px;
+    margin-right: 10px;
+}
+
+.coverage-list li {
+    list-style-type: disc;
+    color: #19D1D0;
+}
+
+.coverage-list li span {
+    color: black;
+}
+
+ol,
+ul {
+    padding-inline-start: 1.1rem;
+}
+
+@media print {
+    .new-page {
+        page-break-before: always;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+    .no-break {
+        page-break-inside: avoid;
+    }
+    body {
+        margin: 0;
+    }
+}
+
+ul {
+    list-style-type: "-   ";
+}
+
+dt,
+dd {
+    display: inline;
+}
+
+dt {
+    font-weight: 600;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.pattern-square {
+    background-image: url( /assets/images/diaginal-line-aqua-5.png);
+    background-repeat: repeat;
+}
+
+.coverage-box {
+    border: 2px solid #2ba4f9;
+    border-radius: 10px;
+    padding: 26px 20px;
+    margin: 58px 2px 0;
+    position: relative;
+    background-color: white;
+}
+
+.coverage-box::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url( /assets/images/oncological-images/blue-rectangle3.png);
+    background-repeat: repeat;
+    background-size: 22px 22px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.sport-photo-1 {
+    display: inline-block;
+    position: relative;
+}
+
+.sport-photo-2 {
+    position: relative;
+}
+
+.sport-photo-2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url( /assets/images/dot-s-blue-5.png);
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+
+.bordered {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.bordered td,
+.bordered th {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 4px;
+}
+
+.spaced-table {
+    width: calc(100% + 20px);
+    border-spacing: 10px;
+    margin: 0 -10px;
+}
+
+.spaced-table-x {
+    width: calc(100% + 20px);
+    border-spacing: 10px 0;
+    margin: 0 -10px;
+}
+
+.spaced-table-1 {
+    width: calc(100% + 20px);
+    border-spacing: 10px 2px;
+    margin: 0 -10px;
+}
+
+.no-padding {
+    padding-inline-start: 0;
+    padding: 0;
+}
+
+td,
+th {
+    padding: 2px 5px;
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.signature-container {
+    width: 60mm;
+    height: 40mm;
+    border-bottom: 2px solid black;
+}
+
+.signature-name {
+    width: 60mm;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+.data-box {
+    border: 1px solid black;
+    /* font-size: 16px; */
+    /* font: 16px "Times"; */
+    line-height: 16px;
+}
+
+.box {
+    border: 1px solid black;
+}
+
+.square-container {
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.square {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-1-container {
+    width: 180px;
+    max-width: 180px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle-1 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 180px;
+    max-width: 180px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-container {
+    width: 90px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 90px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.border-top {
+    border-top: 2px solid black;
+}
+
+.border-bottom {
+    border-bottom: 2px solid black;
+}
+
+.main-header-container {
+    background-color: cornflowerblue;
+    color: white;
+    height: 430px;
+    position: relative;
+    padding: var(--page-padding-x);
+}
+
+.header-table-container-2 {
+    background-color: white;
+    padding: 0 25px;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    max-width: 420px;
+    width: 420px;
+    transform: translate(var(--page-padding-x), 60px);
+}
+
+.header-table-container {
+    background-color: white;
+    padding: 0 25px;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    max-width: 420px;
+    width: 420px;
+    transform: translate(var(--page-padding-x), 100px);
+}
+
+.header-table-header {
+    background-color: #E8E8E8;
+    color: black;
+    padding: 10px 25px 5px;
+    margin: 0 -25px;
+    font-weight: 500;
+    font-family: Sailec;
+}
+
+.middle-second-page {
+    position: relative;
+    height: 200px;
+    width: calc(100% + 128px);
+}
+
+.middle-second-page::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url( /assets/images/bar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+    z-index: -1;
+    bottom: 130;
+    left: -64;
+}
+.afterTip{
+  padding: 16px;
+}
+
+.tip {
+    border-radius: 8px;
+    background: 
+     linear-gradient(#fff,#fff) content-box,
+     linear-gradient(90deg, #73CDCD 6.5%, #749BFF 23.49%, #8A7BE6 41.63%, rgba(239, 96, 135, 0.895833) 59.3%, #FFA082 78.33%, #FFCB7E 94.81%) border-box;
+    padding: 2px;
+    position: relative;
+    background-color: white;
+}
+
+.afterTip::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url( /assets/images/oncological-images/blue-rectangle3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: -20px;
+    bottom: -16px;
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.table-label {
+    font-size: 10pt;
+}
+
+.header-table tbody {
+    font-family: 'Lato';
+}
+
+.header-table th,
+.header-table td {
+    padding: 10px 10px 5px;
+}
+
+.header-table td:first-child {
+    padding-left: 0;
+}
+
+.header-table th:not(:last-child),
+.header-table td:not(:last-child) {
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.header-table tr:not(:last-child) td {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+/* .cell-art {
+      text-align: center;
+      vertical-align: middle;
+    } */
+
+.field-label {
+    /* font-size: 15px; */
+    font-weight: 600;
+    /* font: bold 15px "Times"; */
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.insureds:after {
+    content: ',';
+}
+
+.insureds:last-child:after {
+    content: '';
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.font-data-1 {
+    /* font-size: 16px; */
+    /* font: 16px "Times"; */
+    line-height: 16px;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.no-uppercase {
+    text-transform: initial;
+}
+
+
+.arial {
+    font-family: "Arial";
+    font-size: 0.5rem;
+}
+
+.arial table {
+    font-family: "Sailec";
+    font-size: 0.5rem;
+}
+
+.arial-narrow {
+    font-family: "Sailec";
+    font-size: 0.75rem;
+}
+
+ol,
+ul {
+    padding-inline-start: 1.1rem;
+}
+
+body {
+    line-height: 1.2;
+}
+
+@media print {
+    .new-page {
+        page-break-before: always;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+    .no-break {
+        page-break-inside: avoid;
+    }
+    /* body {
+        margin: 0;
+      } */
+}
+
+ul {
+    list-style-type: "-   ";
+}
+
+dt,
+dd {
+    display: inline;
+}
+
+dt {
+    font-weight: 600;
+}
+
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.bordered {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.bordered td,
+.bordered th {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.spaced-table {
+    width: calc(100% + 20px);
+    border-spacing: 10px;
+    margin: 0 -10px;
+}
+
+.spaced-table-x {
+    width: calc(100% + 40px);
+    border-spacing: 20px 0;
+    margin: 0 -15px;
+}
+
+.spaced-table-3 {
+    width: calc(100% + 10px);
+    border-spacing: 5px 0;
+}
+
+.spaced-table-4 {
+    width: calc(100% + 40px);
+    border-spacing: 20px 0;
+}
+
+.spaced-table-1 {
+    width: calc(100% + 20px);
+    border-spacing: 10px 2px;
+    margin: 0 -10px;
+}
+
+.spaced-table-5 {
+    width: calc(100% + 30px);
+    border-spacing: 10px 0px;
+    margin: 0 -5px;
+}
+
+.spaced-table-6 {
+    width: calc(100% + 20px);
+    border-spacing: 10px 2px;
+    margin: 0 -5px;
+}
+
+.no-padding {
+    padding-inline-start: 0;
+    padding: 0;
+}
+
+th {
+    padding: 1px 0px;
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.signature-container {
+    width: 60mm;
+    height: 40mm;
+    border-bottom: 2px solid black;
+}
+
+.signature-name {
+    width: 60mm;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+
+.data-box {
+    border: 1px solid black;
+    /* font-size: 16px; */
+    /* font: 16px "Times"; */
+    line-height: 16px;
+}
+
+.data-box-2 {
+    border: 1px solid black;
+    /* font-size: 16px; */
+    /* font: 16px "Times"; */
+    line-height: 32px;
+}
+
+.box {
+    border: 1px solid black;
+}
+
+.square-container {
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.square {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 20px;
+    max-width: 20px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-1-container {
+    width: 180px;
+    max-width: 180px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle-1 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 180px;
+    max-width: 180px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-container-2 {
+    width: 90px;
+    max-width: 90px;
+    height: 40px;
+    max-height: 40px;
+}
+
+.rectangle-2 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 90px;
+    max-width: 90px;
+    height: 40px;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.rectangle-container-3 {
+    width: 90px;
+    max-width: 90px;
+    height: 50px;
+    max-height: 50px;
+}
+
+.rectangle-3 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 90px;
+    max-width: 90px;
+    height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.rectangle-container-7 {
+    width: 150px;
+    max-width: 150px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle-7 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 150px;
+    max-width: 150px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-container {
+    width: 90px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 90px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.rectangle-container-col-1-row-2 {
+    width: 45px;
+    max-width: 45px;
+    height: 45px;
+    max-height: 45px;
+}
+
+.rectangle-col-1-row-2 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 45px;
+    max-width: 45px;
+    height: 45px;
+    max-height: 45px;
+    overflow: hidden;
+}
+
+.rectangle-container-col-1-row-1 {
+    width: 45px;
+    max-width: 45px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.rectangle-col-1-row-1 {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding-left: 5px;
+    width: 45px;
+    max-width: 45px;
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.border-top {
+    border-top: 4px solid black;
+}
+
+.border-bottom {
+    border-bottom: 2px solid black;
+}
+
+/* .header-table {
+    border: 1px solid black;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    max-width: 400px;
+    transform: translate(var(--space-32), var(--space-12));
+}
+
+.header-table thead {
+    background-color: lightblue;
+    color: white;
+} */
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+/* .cell-art {
+      text-align: center;
+      vertical-align: middle;
+    } */
+
+.field-label {
+    /* font-size: 15px; */
+    font-weight: 600;
+    /* font: bold 15px "Times"; */
+    line-height: 16px;
+}
+
+.field-label-2 {
+    line-height: 16px; 
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Sailec";
+}
+
+.mt-2 {
+    margin-top: 2px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.font-data-1 {
+    line-height: 16px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.centered {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.centeredTitle {
+    text-align: center;
+    vertical-align: top;
+}
+
+.no-uppercase {
+    text-transform: initial;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-0pky {
+    border-color: inherit;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-lboi {
+    border-color: inherit;
+    text-align: center;
+    vertical-align: middle
+}
+
+.lista-certificado {
+    color: #00AEEF;
+    list-style-type: upper-roman;
+}
+
+.text {
+    font-size: 1rem;
+    color: #262626;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+li.menu-item {
+    margin: 0 0 10px 0;
+}
+
+.justify {
+text-align: justify;
+}
+
+.rectangle-info {
+border: 1px solid black;
+padding: 2px;
+}
